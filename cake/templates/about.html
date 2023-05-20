@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<section id="about" class="about mt-5" >
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+          <img src="{% static  'images/cover.avif' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content fst-italic">
+          <h3>Welcome to our online cake shop! We are dedicated to providing you with high-quality and delicious cakes for all your special occasions. </h3>
+          <p class="fst-italic">
+            Our cake shop offers a wide range of cakes, from classic vanilla and chocolate flavors to exotic and unique flavors like matcha green tea and raspberry lychee. We also offer customization options to make your cake truly special and tailored to your needs.
+          </p>
+          <ul>
+            <p ><li class="fst-italic"><i class="bi bi-check-circle"></i>Our online cake shop makes it easy for you to order and receive your cake without leaving the comfort of your home. Simply browse our selection of cakes, choose the size and flavor you prefer, and place your order. We offer same-day delivery for certain areas, and all of our cakes are carefully packaged to ensure they arrive fresh and in perfect condition</li></p>
+            <li class="fst-italic"><i class="bi bi-check-circle"></i> At our cake shop, we understand the importance of quality ingredients and craftsmanship. That's why we use only the finest ingredients in our cakes, including locally sourced dairy and eggs, high-quality chocolate and vanilla, and fresh fruits and nuts. Our experienced bakers and decorators take pride in creating beautiful and delicious cakes that will delight your taste buds and impress your guests.</li>
+            <li class="fst-italic"><i class="bi bi-check-circle"></i>Whether you're celebrating a birthday, wedding, anniversary, or any other special occasion, our online cake shop has the perfect cake for you. We offer a range of sizes, from small individual cakes to large party cakes that can feed dozens of guests. We also offer vegan and gluten-free options for those with dietary restrictions.</li>
+          </ul>
+          <p class="fst-italic">
+            We are committed to providing you with exceptional customer service and a hassle-free ordering experience. If you have any questions or concerns, our friendly and knowledgeable customer service team is always here to help. We strive to make your experience with us as enjoyable and stress-free as possible.
+          </p>
+          <p class="fst-italic">
+            Thank you for choosing our online cake shop for your cake needs. We look forward to serving you and helping you create special memories with our delicious and beautiful cakes.
+
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+{% endblock content %}

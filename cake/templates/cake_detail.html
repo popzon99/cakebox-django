@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+  <h1>{{ cake.name }}</h1>
+  <img src="{{ cake.image.url }}" alt="{{ cake.name }}">
+  <p>{{ cake.description }}</p>
+  <p>Price: {{ cake.price }}</p>
+  <p>Category: {{ cake.category }}</p>
+  {% if cake.availability %}
+    <p>This cake is currently available.</p>
+  {% else %}
+    <p>This cake is not currently available.</p>
+  {% endif %}
+  <h2>Reviews</h2>
+  {% if reviews %}
+    <ul>
+      {% for review in reviews %}
+        <li>{{ review.rating }}/5 - {{ review.comment }} - {{ review.user }}</li>
+      {% empty %}
+        <li>No reviews available.</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No reviews available.</p>
+  {% endif %}
+  <h2>Add a review</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ review_form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+
+
+
+
+
+
+
+
+
+{% endblock content %}

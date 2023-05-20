@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    
+
+        {% block content %}
+        <div class="container">
+            
+            <div class="row mt-3 ">
+
+                
+
+                <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 mx-auto ">
+
+                    <div class="course-item ">
+                        <img src="{{ cake.image.url }}" alt="{{ cake.name }}" class="img-fluid mr-0" alt="...">
+                        <div class="course-content">
+                          <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4>{{ cake.name }}</h4>
+                            <p class="price ">${{ cake.price }}</p>
+                          </div>
+          
+                          <h3><a href="course-details.html">{{ cake.category }}</a></h3>
+                          <p>{{ cake.description }}</p>
+                          <div class="trainer d-flex justify-content-between align-items-center">
+                            <div class="trainer-profile d-flex align-items-center">
+
+                                {% if cake.availability %}
+                                   <p>Availability: Available</p>
+                                {% else %}
+                                  <p>Availability: Out of Stock</p>
+                               {% endif %}
+                           
+                            </div>
+                            <div>
+                                <a class="btn btn-dark" href="{% url 'update_cake' pk=cake.pk %}">Edit</a>
+                                <a class="btn btn-dark" href="{% url 'delete_cake' pk=cake.pk %}">Delete</a>
+                                <a class="btn btn-dark" href="{% url 'list_cakes' %}">Back to list</a>
+                                </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                
+                       
+             </div>
+        
+    </div>
+</div>
+{% endblock %}
+
+
